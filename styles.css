@@ -1,0 +1,101 @@
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #5eead4;
+            border-radius: 5px;
+        }
+
+        .header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            margin: 0;
+        }
+
+        .status-message {
+            margin-bottom: 10px;
+            color: green;
+            display: none;
+            animation: fadeInOut 3s;
+        }
+        
+        @keyframes fadeInOut {
+            0% { opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        form {
+            display: flex;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        form input[type="text"],
+        form textarea {
+            flex: 1;
+            padding: 10px;
+            margin-right: 10px;
+            border-radius: 5px;
+            border: none;
+            box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        form input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #0d9488;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+
+        .todo-item {
+            display: flex;
+            padding: 10px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+        }
+
+        .todo-item h2 {
+            flex: 1;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .todo-item p {
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
+
+        .todo-item form {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        .todo-item button {
+            padding: 5px 10px;
+            background-color: #0d9488;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .todo-item button:hover {
+            background-color: #3e8e41;
+        }
+   
