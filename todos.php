@@ -100,22 +100,25 @@
         while ($row = $result->fetch_assoc()) {
             ?>
             <div class="todo-item">
-                 <form method="post">
-                <input type="checkbox" name="completed" value="<?php echo $row["id"]; ?>" <?php echo $row["completed"] ? 'checked' : ''; ?>>
-            </form>
+    <form method="post" class="checkbox-form">
+        <label>
+            <input type="checkbox" name="completed" value="<?php echo $row["id"]; ?>" <?php echo $row["completed"] ? 'checked' : ''; ?>>
             <h2 class="<?php echo $row["completed"] ? 'completed' : ''; ?>"><?php echo $row["todoName"]; ?></h2>
-            
-                <form method="post">
-                    <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                    <input type="hidden" name="action" value="edit">
-                    <button type="submit">Edit</button>
-                </form>
-                <form method="post">
-                    <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
-                    <input type="hidden" name="action" value="delete">
-                    <button type="submit">Delete</button>
-                </form>
-            </div>
+        </label>
+    </form>
+    <div class="button-container">
+        <form method="post" class="edit-form">
+            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+            <input type="hidden" name="action" value="edit">
+            <button type="submit">Edit</button>
+        </form>
+        <form method="post" class="delete-form">
+            <input type="hidden" name="id" value="<?php echo $row["id"]; ?>">
+            <input type="hidden" name="action" value="delete">
+            <button type="submit">Delete</button>
+        </form>
+    </div>
+</div>
             <?php
         }
     } else {
